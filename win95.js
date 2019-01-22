@@ -40,3 +40,24 @@ function click4() {
 }
 
 addEventListener("dblclick", click4);
+
+var isDragged = 0;
+var xPos = 500;
+var yPos = 300;
+var xStart;
+var yStart;
+var xMouseStart;
+var yMouseStart;
+
+function click5(event) {
+	let x = document.querySelector(".topbar");
+	if (x == event.target) {
+		isDragged = 1;
+		xStart = xPos;
+		yStart = yPos;
+		xMouseStart = event.clientX;
+		yMouseStart = event.clientY;
+	}
+}
+
+addEventListener("mousedouwn", click5),
