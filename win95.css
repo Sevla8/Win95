@@ -119,15 +119,16 @@ div > ul > li:hover {
 
 .icon {
 	display: inline-block;
-	width: 300px;
-	height: 30px;
 	color: black;
 	position: relative;
-	margin-top: 200px;
-}
-
-.icon:before {
-	content: url("image/notFound.png");
+	left: 50px;
+	height: 100px;
+	width: 200px;
+	text-align: center;
+	padding-top: 170px;
+	background-image: url("image/notFound.png");
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .window {

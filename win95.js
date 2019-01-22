@@ -1,3 +1,5 @@
+document.querySelector("#lanceur").style.visibility = "visible";
+
 function click1(event) {
 	let start = document.querySelector("#start");
 	let lanceur = document.querySelector("#lanceur");
@@ -14,9 +16,8 @@ addEventListener("click", click1);
 
 function click2(event) {
 	let shut = document.querySelector("#shutdown");
-	if (shut == event.target) {
-		document.location.href = "controle.1.1_loading.html"
-	}
+	if (shut == event.target)
+		document.location.href = "loading.html";
 }
 
 addEventListener("click", click2);
@@ -25,9 +26,8 @@ function click3(event) {
 	let x = document.querySelector(".close");
 	let body = document.querySelector("body");
 	let wind = document.querySelector(".window");
-	if (x == event.target) {
+	if (x == event.target)
 		body.removeChild(wind);
-	}
 }
 
 addEventListener("click", click3);
@@ -40,8 +40,3 @@ function click4() {
 }
 
 addEventListener("dblclick", click4);
-
-var isDragged = 0;
-
-var xPos = ;
-var yPos = ;
