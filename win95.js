@@ -60,4 +60,4 @@ function click5(event) {
 	}
 }
 
-addEventListener("mousedouwn", click5),
+addEventListener("mousedouwn", click5);
