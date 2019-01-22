@@ -1,0 +1,192 @@
+/******************************Reset*********************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*******************************Reset********************************/
+
+body {
+	background-image: url(image/win95.jpg);
+}
+
+.barre {
+	background-color: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	width: 100%;
+}
+
+#start {
+	display: inline-block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	width: 10em;
+	box-shadow: 1px 1px 12px black;
+}
+
+#start:before  {
+	content: url("image/logoWin95.png");
+}
+
+div > ul > li:first-child {
+	position: fixed;
+	bottom: 250px;
+	left: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+	border-color: black;
+}
+div > ul > li:nth-child(2) {
+	position: fixed;
+	bottom: 200px;
+	left: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+}
+div > ul > li:nth-child(3) {
+	position: fixed;
+	bottom: 150px;
+	left: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+}
+div > ul > li:nth-child(4) {
+	position: fixed;
+	bottom: 100px;
+	left: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+}
+div > ul > li:nth-child(5) {
+	position: fixed;
+	bottom: 50px;
+	left: 10px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+	border-color: #000000;
+}
+
+div > ul > li:hover {
+	background-color: blue;
+}
+
+.icon {
+	display: inline-block;
+	width: 300px;
+	height: 30px;
+	color: black;
+	position: relative;
+	margin-top: 200px;
+}
+
+.icon:before {
+	content: url("image/notFound.png");
+}
+
+.window {
+	position: fixed;
+	bottom: 300px;
+	left: 500px;
+	width: 300px;
+	height: 200px;
+	background-color: white;
+}
+
+.close {
+	width: 1em;
+	position: fixed;
+	bottom: 485px;
+	left: 785px;
+}
+
+.topbar {
+	width: 100%;
+	height: 30px;
+	background-color: blue;
+}
+
+ul > li > ul > li:first-child {
+	position: fixed;
+	bottom: 350px;
+	left: 200px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+	border-color: black;
+	visibility: hidden;
+}
+ul > li > ul > li:nth-child(2) {
+	position: fixed;
+	bottom: 300px;
+	left: 200px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+	border-color: #000000;
+	visibility: hidden;
+}
+ul > li > ul > li:nth-child(3) {
+	position: fixed;
+	bottom: 250px;
+	left: 200px;
+	width: 200px;
+	height: 50px;
+	background-color: white;
+	border-color: #000000;
+	visibility: hidden;
+}
+
+ul > li > ul > li:hover {
+	background-color: blue;
+}
+
+div > ul > li:first-child:hover > ul > li {
+	visibility: visible;
+}
