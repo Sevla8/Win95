@@ -33,14 +33,18 @@ function click3(event) {
 addEventListener("click", click3);
 
 function click4() {
-	let wind = document.createElement("div");
-	document.body.appendChild(wind);
-	wind.innerHTML = "<div class=\"topbar\"><span class=\"close\">x</span></div>";
-	wind.classList.add("window");
+	let list = document.querySelectorAll(".window");
+	if (list.length == 0) {
+		let wind = document.createElement("div");
+		document.body.appendChild(wind);
+		wind.innerHTML = "<div class=\"topbar\"><span class=\"close\">x</span></div>";
+		wind.classList.add("window");
+	}
 }
 
 addEventListener("dblclick", click4);
 
+var elem = document.querySelector(".window");
 var isDragged = 0;
 var xPos = 500;
 var yPos = 300;
@@ -48,26 +52,26 @@ var xStart;
 var yStart;
 var xMouseStart;
 var yMouseStart;
+var cible = document.querySelector(".topbar");
 
 function click5(event) {
-	isDragged = 1;
-	xStart = xPos;
-	yStart = yPos;
-	xMouseStart = event.clientX;
-	yMouseStart = event.clientY;
+	if (cible == event.target) {
+		isDragged = 1;
+		xStart = xPos;
+		yStart = yPos;
+		xMouseStart = event.clientX;
+		yMouseStart = event.clientY;
+	}
 }
 
-addEventListener("mousedouwn", click5);
+addEventListener("mousedown", click5);
 
 function click6(event) {
-	let x = document.querySelector(".topbar");
-	if (x == event.target) {
-		if (isDragged) {
-			x.left = parseInt(x.left.split("px")) + xMouseStart - xStart + 'px';
-			x.top = parseInt(x.top.split("px")) + yMouseStart - yStart +'px' ;
-			xPos = xPos + xMouseStart - xStart;
-			yPos = yPos + yMouseStart - yStart;
-		}
+	if (isDragged) {
+		elem.style.left = xStart + Math.round(event.clientX - xMouseStart) + "px";
+		elem.style.top = yStart + Math.round(event.clientY - yMouseStart) + "px" ;
+		xPos = elem.style.left.split("px");
+		yPos = elem.style.top.split("px");
 	}
 }
 

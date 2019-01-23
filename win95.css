@@ -141,10 +141,9 @@ div > ul > li:hover {
 }
 
 .close {
-	width: 1em;
-	position: fixed;
-	top: 300px;
-	left: 785px;
+	position: relative;
+	top: 20%;
+	left: 95%;
 }
 
 .topbar {
