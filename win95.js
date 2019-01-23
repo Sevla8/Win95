@@ -50,14 +50,31 @@ var xMouseStart;
 var yMouseStart;
 
 function click5(event) {
-	let x = document.querySelector(".topbar");
-	if (x == event.target) {
-		isDragged = 1;
-		xStart = xPos;
-		yStart = yPos;
-		xMouseStart = event.clientX;
-		yMouseStart = event.clientY;
-	}
+	isDragged = 1;
+	xStart = xPos;
+	yStart = yPos;
+	xMouseStart = event.clientX;
+	yMouseStart = event.clientY;
 }
 
 addEventListener("mousedouwn", click5);
+
+function click6(event) {
+	let x = document.querySelector(".topbar");
+	if (x == event.target) {
+		if (isDragged) {
+			x.left = parseInt(x.left.split("px")) + xMouseStart - xStart + 'px';
+			x.top = parseInt(x.top.split("px")) + yMouseStart - yStart +'px' ;
+			xPos = xPos + xMouseStart - xStart;
+			yPos = yPos + yMouseStart - yStart;
+		}
+	}
+}
+
+addEventListener("mousemove", click6);
+
+function click7() {
+	isDragged = 0;
+}
+
+addEventListener("mouseup", click7);
